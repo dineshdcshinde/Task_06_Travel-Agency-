@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+body {
+  font-family: "Inria Sans", sans-serif;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+}
+.wrapper .main {
+  /* height: 100vh;
+  width: 100vw; */
+  height: 100%;
+  width: 100%;
+  background-image: url("./assets/photos/header-image-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: inline-block;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  align-items: center;
+  padding-top: 1%;
+}
+
+nav .nav-sec {
+  font-size: 1.3rem;
+  font-weight: 600;
+transition: color 0.3s linear;
+  
+}
+
+nav .nav-sec:hover{
+  color: #fb8e26;
+  cursor: pointer;
+}
+
+nav .book {
+  background-color: #fb8e26;
+  padding: 12px 25px 12px 25px;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #ffffff00;
+  border-radius: 48px 48px 48px 48px;
+  text-align: center;
+  font-size: 1rem;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.book:hover {
+  background: #021f41;
+  color: white;
+}
+
+.center {
+  text-align: center;
+  color: white;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.center .transparent {
+  color: transparent;
+  font-weight: 600;
+  font-size: 8rem;
+  -webkit-text-stroke: 3px white;
+}
+.center span {
+  font-size: 8rem;
+  font-weight: bolder;
+}
+
+.center .des {
+  font-size: 1.3rem;
+  margin-bottom: 1%;
+}
+
+.center .disc-btn {
+  cursor: pointer;
+  background-color: #fb8e26;
+  padding: 12px 25px 12px 25px;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #ffffff00;
+  border-radius: 48px 48px 48px 48px;
+  text-align: center;
+  font-size: 1rem;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  &:hover {
+    background-color: #060707;
+    color: white;
+    animation-name: zigZag;
+    animation-duration: 1000ms;
+    animation-delay: 0.3s;
+    animation-iteration-count: infinite;
+  }
+}
+
+.disc-btn ::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
+@keyframes zigZag {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.last {
+  margin-top: 1.5%;
+  background-color: #021f41;
+  opacity: 0.9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+}
+.widget{
+    opacity: 1;
+    text-align: center;
+   
+}
+
+.widget img:hover{
+  transform: scale(1.1);
+  animation-timing-function: linear;
+  animation: float 0.3s infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
